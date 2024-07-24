@@ -1,0 +1,23 @@
+header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    
+    .logo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .right_side {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+}

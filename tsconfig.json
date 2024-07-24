@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        /* Базовые настройки */
+        "target": "ESNext",
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "allowJs": true,
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "*": [
+                "types/modules/*"
+            ],
+            "react": [
+                "node_modules/@types/react"
+            ]
+        },
+        /* Бандлинг */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        /* Линтинг */
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false
+    },
+    "include": [
+        "src",
+        "node_modules/primereact"
+    ],
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ],
+}
