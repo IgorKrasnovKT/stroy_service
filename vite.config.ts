@@ -8,6 +8,9 @@ export default defineConfig({
   plugins: [
     react(),
     tsconfigPaths(),
-    svgr(),
+    svgr({
+      svgrOptions: { exportType: 'named', ref: true, svgo: false, titleProp: true },
+      include: '**/*.svg',
+    }),
   ],
 })
