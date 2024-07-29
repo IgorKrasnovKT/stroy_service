@@ -3,9 +3,9 @@ import mainImg from '../../assets/main.jpg'
 
 const Home = memo(() => {
   return (
-    <div>
+    <main>
       <img src={mainImg} alt={'mainImg'} />
-    </div>
+    </main>
   )
 })
 

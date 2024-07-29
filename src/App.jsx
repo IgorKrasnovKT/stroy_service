@@ -3,7 +3,6 @@ import { routes } from './constants/routes'
 import { Header } from './components/header'
 
 function App() {
-  console.log(Object.values(routes))
   return (
     <>
       <Header />

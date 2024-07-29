@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 
 const Products = memo(() => {
   return (
-    <div>Products</div>
+    <main>Products</main>
   )
 })
 

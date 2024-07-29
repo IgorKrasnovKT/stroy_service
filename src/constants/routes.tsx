@@ -6,11 +6,13 @@ import { Home } from "../pages/home";
 import { Products } from '@/pages/products';
 import { Login } from '@/pages/login';
 import { Signup } from '@/pages/signup';
+import { Delivery } from '@/pages/delivery';
 
 enum RoutesNames {
     notFound = 'notFound',
     home = 'home',
     about = 'about',
+    delivery = 'delivery',
     contact = 'contact',
     products = 'products',
     login = 'login',
@@ -40,6 +42,11 @@ export const routes: RouteType = {
         path: '/about',
         name: 'О компании',
         Component: About
+    },
+    [RoutesNames.delivery]: {
+        path: '/delivery',
+        name: 'Доставка',
+        Component: Delivery
     },
     [RoutesNames.contact]: {
         path: '/contact',
