@@ -1,5 +1,7 @@
 header,
 .shortHeader {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,6 +11,7 @@ header,
     max-height: var(--header-height);
     background-color: var(--main-color);
     color: white;
+    z-index: 9999999;
 
     :global(.ant-menu) {
         background-color: var(--main-color);
@@ -58,13 +61,14 @@ header,
 }
 
 @media screen and (max-width: 992px) {
-    body {
+    html {
         padding-bottom: var(--header-height);
     }
 
     header {
-        position: fixed;
+        position: fixed !important;
         bottom: 0;
+        top: unset !important;
         justify-content: center;
         width: 100%;
         padding: 0;
@@ -98,6 +102,7 @@ header,
         flex-direction: column;
         padding: 1rem;
         height: auto;
+        min-height: max-content;
         max-height: max-content;
         
         div {
