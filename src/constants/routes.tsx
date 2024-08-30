@@ -1,5 +1,4 @@
-import React, { MemoExoticComponent, ReactNode } from 'react';
-import { ReactElement } from "react";
+import { MemoExoticComponent } from 'react';
 import { About } from "../pages/about";
 import { Contact } from "../pages/contact";
 import { Home } from "../pages/home";
@@ -8,7 +7,7 @@ import { Login } from '@/pages/login';
 import { Signup } from '@/pages/signup';
 import { Delivery } from '@/pages/delivery';
 
-enum RoutesNames {
+export enum RoutesNames {
     notFound = 'notFound',
     home = 'home',
     about = 'about',
@@ -17,9 +16,9 @@ enum RoutesNames {
     products = 'products',
     login = 'login',
     signup = 'signup',
-};
+}
 
-type RouteType = {
+export type RoutesType = {
     [key in RoutesNames]: {
         path: string;
         name: string;
@@ -27,17 +26,7 @@ type RouteType = {
     }
 }
 
-export const routes: RouteType = {
-    [RoutesNames.notFound]: {
-        path: '*',
-        name: 'Not Found',
-        Component: () => <div>Такой страницы не найдено</div>
-    },
-    [RoutesNames.home]: {
-        path: '/',
-        name: 'Главная',
-        Component: Home
-    },
+export const routes: RoutesType = {
     [RoutesNames.about]: {
         path: '/about',
         name: 'О компании',
@@ -67,6 +56,16 @@ export const routes: RouteType = {
         path: '/signup',
         name: 'Регистрация',
         Component: Signup
+    },
+    [RoutesNames.notFound]: {
+        path: '*',
+        name: 'Not Found',
+        Component: () => <div>Такой страницы не найдено</div>
+    },
+    [RoutesNames.home]: {
+        path: '/',
+        name: 'Главная',
+        Component: Home
     },
 };
 

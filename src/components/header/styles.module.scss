@@ -1,8 +1,24 @@
-header {
+header,
+.shortHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    height: var(--header-height);
+    min-height: var(--header-height);
+    max-height: var(--header-height);
+    background-color: var(--main-color);
+    color: white;
+
+    :global(.ant-menu) {
+        background-color: var(--main-color);
+        color: white;
+
+        li {
+            line-height: calc(var(--header-height) - 1rem);
+            border-radius: .25rem !important;
+        }
+    }
 
     .left_side {
         & {
@@ -10,40 +26,94 @@ header {
             align-items: center;
             gap: 1.5rem;
         }
-    
+
         .logo {
             display: flex;
             flex-direction: column;
         }
 
-        :global {
-            .ant-tabs > .ant-tabs-nav {
-                margin: .5rem;
-            }
-
-            .ant-tabs-tab {
-                padding: 0;
-
-                .link {
-                    display: flex;
-                    align-items: center;
-                    column-gap: .5rem;
-                    padding-bottom: .5rem;
-                }
-            }
+        .linkLabel {
+            margin-inline-start: 10px;
         }
     }
 
     .right_side {
         display: flex;
         align-items: center;
-        gap: .5rem;
+        gap: 1.5rem;
+        margin-top: -5px;
+    }
+}
 
-        .contact_link {
-            color: -webkit-link;
+@media screen and (min-width: 993px) {
+    .shortHeader {
+        display: none;
+    }
 
-            &:last-of-type {
-                margin-right: 1rem;
+    header {
+        li:has(.homeLink) {
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        padding-bottom: var(--header-height);
+    }
+
+    header {
+        position: fixed;
+        bottom: 0;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+
+        .left_side {
+            width: 100%;
+
+            ul {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+
+                &::after,
+                &::before {
+                    content: unset;
+                }
+
+                .ant-menu-overflow-item-rest {
+                    display: none;                      
+                }
+            }
+        }
+
+        .logo,
+        .right_side {
+            display: none !important;
+        }
+    }
+
+    .shortHeader {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+        max-height: max-content;
+        
+        div {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: .5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    header {
+        .left_side {
+            .linkLabel {
+                display: none;
             }
         }
     }
