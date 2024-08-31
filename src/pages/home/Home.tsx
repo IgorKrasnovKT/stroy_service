@@ -15,7 +15,9 @@ const Home = memo(() => {
       <div className={styles.banner}>
         <div className={styles.bannerContent}>
           <div>Компания «Строй-сервис»</div>
-          <div className={styles.bannerTitle}>Продажа строительных материалов</div>
+          <div className={styles.bannerTitle}>
+            Продажа строительных материалов
+          </div>
           <div>для любых целей</div>
           <Link to={routes.about.path} className={styles.aboutBtn}>
             Подробнее
