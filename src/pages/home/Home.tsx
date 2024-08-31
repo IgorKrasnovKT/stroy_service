@@ -8,6 +8,7 @@ import {
   QuestionOutlined,
 } from "@ant-design/icons";
 import { ReactComponent as DeliveryIcon } from "../../assets/delivery.svg";
+import '../../assets/main.jpg'
 
 const Home = memo(() => {
   return (
