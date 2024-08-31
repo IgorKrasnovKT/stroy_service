@@ -3,6 +3,7 @@ import App from "./App.jsx";
 import "./index.scss";
 import { BrowserRouter } from "react-router-dom";
 
+console.log(import.meta.env.PUBLIC_URL)
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter basename={import.meta.env.PUBLIC_URL}>
     <App/>
