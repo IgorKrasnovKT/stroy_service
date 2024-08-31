@@ -60,7 +60,7 @@ export const routes: RoutesType = {
     [RoutesNames.notFound]: {
         path: '*',
         name: 'Not Found',
-        Component: () => <div>Такой страницы не найдено</div>
+        Component: () => <main>Такой страницы не найдено</main>
     },
     [RoutesNames.home]: {
         path: '/',
