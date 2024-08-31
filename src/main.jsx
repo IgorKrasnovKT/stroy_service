@@ -1,14 +1,14 @@
-// import ReactDOM from "react-dom/client";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom/client";
+// import ReactDOM from 'react-dom';
 import App from "./App.jsx";
 import "./index.scss";
 import { BrowserRouter } from "react-router-dom";
 
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <BrowserRouter>
-//     <App/>
-//   </BrowserRouter>
-// );
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>
+);
 
 // const root = createRoot(
 //   document.getElementById('root')
@@ -19,9 +19,9 @@ import { BrowserRouter } from "react-router-dom";
 //   </BrowserRouter>
 // );
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <BrowserRouter>
+//     <App />
+//   </BrowserRouter>,
+//   document.getElementById("root")
+// );
