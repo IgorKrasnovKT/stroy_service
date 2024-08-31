@@ -1,27 +1,10 @@
 import ReactDOM from "react-dom/client";
-// import ReactDOM from 'react-dom';
 import App from "./App.jsx";
 import "./index.scss";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <BrowserRouter basename={import.meta.env.PUBLIC_URL}>
     <App/>
   </BrowserRouter>
 );
-
-// const root = createRoot(
-//   document.getElementById('root')
-// );
-// root.render(
-//   <BrowserRouter>
-//       <App/>
-//   </BrowserRouter>
-// );
-
-// ReactDOM.render(
-//   <BrowserRouter>
-//     <App />
-//   </BrowserRouter>,
-//   document.getElementById("root")
-// );
