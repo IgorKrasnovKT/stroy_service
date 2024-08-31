@@ -1,6 +1,6 @@
 {
   "name": "stroy_service",
-  "homepage": "https://igorkrasnovkt.github.io/stroy_service/",
+	"homepage": ".",
   "private": true,
   "version": "0.0.0",
   "type": "module",
