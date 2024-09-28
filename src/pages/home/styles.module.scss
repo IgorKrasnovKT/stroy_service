@@ -166,6 +166,10 @@
 
             .item {
                 font-size: 1.5rem;
+
+                .itemIcon {
+                    margin-bottom: unset;
+                }
             }
         }
     }

@@ -20,6 +20,7 @@
 html {
   padding-top: var(--header-height);
   height: calc(100% - var(--header-height));
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {

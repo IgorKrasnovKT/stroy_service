@@ -8,13 +8,14 @@ import {
   QuestionOutlined,
 } from "@ant-design/icons";
 import { ReactComponent as DeliveryIcon } from "../../assets/delivery.svg";
+import { ReactComponent as PlaceholderIcon } from "../../assets/placeholder.svg";
 
 const Home = memo(() => {
   return (
     <main className={styles.main}>
       <div className={styles.banner}>
         <div className={styles.bannerContent}>
-          <div>Компания «Строй-сервис»</div>
+          <div>Компания ООО «Строй-сервис»</div>
           <div className={styles.bannerTitle}>
             Продажа строительных материалов
           </div>
@@ -27,7 +28,7 @@ const Home = memo(() => {
 
       <div className={styles.content}>
         <div className={styles.item}>
-          <div className={styles.itemLabel}>C 2015 года на рынке</div>
+          <div className={styles.itemLabel}>C 2009 года на рынке</div>
           <InfoCircleOutlined className={styles.itemIcon} />
         </div>
         <div className={styles.item}>
@@ -44,7 +45,7 @@ const Home = memo(() => {
           <div className={styles.itemLabel}>
             Работаем по Чувашии и Йошкар-оле
           </div>
-          <QuestionOutlined className={styles.itemIcon} />
+          <PlaceholderIcon className={styles.itemIcon} />
         </div>
       </div>
     </main>
