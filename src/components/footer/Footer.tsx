@@ -3,11 +3,13 @@ import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
 
 const Footer = memo(() => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer>
       <div className={styles.leftSide}>
         <div className={styles.logo}></div>
-        <span>1992–2024 г. «RTSoft» Все права защищены</span>
+        <span>2009–{currentYear} г. ООО «Строй-Сервис» Все права защищены</span>
       </div>
       <div className={styles.rightSide}>
         <div>

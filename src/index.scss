@@ -1,5 +1,5 @@
 :root {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   background-color: white;
@@ -9,6 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --header-height: 46px;
+  --header-large-height: calc(var(--header-height) + 2rem);
 
   --main-color: rgb(37, 70, 134);
   --main-light-color: rgb(58, 94, 167);
@@ -16,11 +17,18 @@
   --footer-color: rgb(234, 235, 245);
 }
 
-body {
-  margin: 0;
+html {
+  padding-top: var(--header-height);
+  height: calc(100% - var(--header-height));
 }
 
-html, body {
+body {
+  margin: 0;
+  height: 100%;
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 

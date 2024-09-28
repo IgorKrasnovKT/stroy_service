@@ -10,6 +10,7 @@ import {
   PhoneOutlined,
 } from "@ant-design/icons";
 import { ReactComponent as DeliveryIcon } from "../../assets/delivery.svg";
+import classNames from "classnames";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -112,14 +113,14 @@ const Header = memo(() => {
   const clearActiveKey = useCallback(() => setActiveKey(undefined), []);
 
   return (
-    <>
+    <header>
       <div className={styles.shortHeader}>
         <Logo onClick={clearActiveKey} />
         <div>
           <ContactLinks />
         </div>
       </div>
-      <header>
+      <div className={styles.fullHeader}>
         <div className={styles.left_side}>
           <Logo onClick={clearActiveKey} />
           <Menu
@@ -139,8 +140,8 @@ const Header = memo(() => {
           <Link to={routes.signup.path}>{routes.signup.name}</Link>
         </Button> */}
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 });
 
